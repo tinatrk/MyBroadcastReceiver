@@ -14,6 +14,7 @@ internal class MyStorage(context: Context) {
         const val PREFS_NAME = "my_prefs"
         const val PREFS_KEY_ACTION_COUNT = "action_count"
         const val PREFS_KEY_LAST_ACTION_ID = "last_action_id"
+        const val UNKNOWN_ID = "unknown_id"
     }
 
     private val prefs by lazy {
@@ -36,4 +37,10 @@ internal class MyStorage(context: Context) {
         )
     }
 
+    fun clearData() {
+        prefs.edit {
+            putInt(PREFS_KEY_ACTION_COUNT, 0)
+                .putString(PREFS_KEY_LAST_ACTION_ID, UNKNOWN_ID)
+        }
+    }
 }
