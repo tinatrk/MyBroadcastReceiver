@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">MyBroadcastReceiver</string>
+
+    <string name="btn_clear_data">Очистить сохраненные данные</string>
 </resources>
