@@ -40,4 +40,5 @@ class MainActivity : AppCompatActivity() {
         val data = myStorage.getCurrentData()
         findViewById<TextView>(R.id.tv_info).text = data.toString()
     }
+    ///////
 }
